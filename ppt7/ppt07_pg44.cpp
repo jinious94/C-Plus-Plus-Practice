@@ -14,18 +14,19 @@ int * arr () {
 }
 
 int main() {
-    int (*sum_pointer)(int a, int b);
+    int (*sum_pointer)(int, int);
     int * (*arr_pointer)();
+    
 
     sum_pointer = sum;
     arr_pointer = &arr;
 
-    cout << sum_pointer(10, 20) << endl;
+    cout << sum_pointer(10, 20) << endl; // 30
 
-    cout << arr_pointer()[0] << endl;
-    cout << arr_pointer()[1] << endl;
-    cout << arr_pointer()[2] << endl;
-    cout << arr_pointer()[3] << endl;
+    cout << arr_pointer()[0] << endl; // 1
+    cout << arr_pointer()[1] << endl; // 2
+    cout << arr_pointer()[2] << endl; // 3
+    cout << arr_pointer()[3] << endl; // 4
 
     return 0;
 }

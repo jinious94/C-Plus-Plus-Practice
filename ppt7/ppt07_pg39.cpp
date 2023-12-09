@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -20,15 +21,15 @@ int main() {
     int *ptr = new int;
     *ptr = 10;
 
-    cout << *ptr << endl;
+    cout << *ptr << endl; // 10
 
     delete ptr;
 
-    cout << *ptr << endl;
+    cout << *ptr << endl; // 10
 
     ptr = 0;
     *ptr = 9999;
-    cout << *ptr << endl;
+    cout << *ptr << endl; // 쓰레기 값
 
 
     return 0;
